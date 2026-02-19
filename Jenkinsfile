@@ -64,7 +64,7 @@ spec:
       - name: docker-angular
         image: sakthisiddu1/docker-angular:${env.BUILD_NUMBER}
         ports:
-        - containerPort: 5000
+        - containerPort: 80
 """
 
                     def serviceYaml = """
@@ -77,8 +77,8 @@ spec:
     app: docker-angular
   ports:
   - protocol: TCP
-    port: 5000
-    targetPort: 5000
+    port: 80
+    targetPort: 80
     nodePort: 30007
   type: NodePort
 """
